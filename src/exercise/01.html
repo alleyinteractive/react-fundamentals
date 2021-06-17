@@ -8,7 +8,7 @@
 
 <!-- These next instructions are to be written in JavaScript in the <script> tag -->
 <!-- 🐨 Create a div -->
-<!--   💰 document.createElement('div') -->
+  <!-- 💰 document.createElement('div') -->
 
 <!-- 🐨 Set the div's textContent to 'Hello World' and className to 'container' -->
 <!--   💰 div.textContent = '...' -->
@@ -16,3 +16,22 @@
 <!-- 🐨 Append the div to the root div using `append` -->
 <!--   💰 document.getElementById('root') -->
 <!--   📜 https://developer.mozilla.org/en-US/docs/Web/API/ParentNode/append -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   
+</head>
+<body>
+    <div id="root"></div>
+    <script type="module">
+    var div = document.createElement('div');
+    div.textContent = "Hello World, Its Brandon";
+    div.className = "container";
+    
+    var root = document.getElementById('root');
+root.append(div);
+    
+    </script>
+</body>
+
+</html>
