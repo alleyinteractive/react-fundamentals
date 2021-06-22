@@ -1,7 +1,7 @@
 <!-- Intro to raw React APIs -->
 <!-- http://localhost:3000/isolated/exercise/02.html -->
 
-<body>
+<!-- <body>
   <div id="root"></div>
 
 
@@ -21,12 +21,35 @@
     // This is similar to ReactDOM.render
     // rootElement.append(element)
 
-    const elementProps = {id: 'element-id', children: 'Hello world!'}
-    const elementType = 'h1'
-    const reactElement = React.createElement(elementType, elementProps)
-    ReactDOM.render(reactElement, rootElement)
+    const element = React.createElement('div', {
+      className: 'container',
+      children: 'Hello World, its ME',
+    })
+
+    ReactDom.render(element, document.getElementById('root'))
+
+    // const elementProps = {id: 'element-id', children: 'Hello world!'}
+    // const elementType = 'h1'
+    // const reactElement = React.createElement(elementType, elementProps)
+    // ReactDOM.render(reactElement, rootElement)
     // 🐨 Please re-implement the regular document.createElement code above
     // with these React API calls
     // 💰 The example in the markdown file should be a good hint for you.
   </script>
-</body>
+</body> -->
+
+
+
+<body>
+  <div id="root"></div>
+  <script src="https://unpkg.com/react@17.0.0/umd/react.development.js"></script>
+  <script src="https://unpkg.com/react-dom@17.0.0/umd/react-dom.development.js"></script>
+  <script type="module">
+    const rootElement = document.getElementById('root')
+    const element = React.createElement('div', {
+      className: 'container',
+      children: 'Hello World, it Me Brandon',
+    })
+    ReactDOM.render(element, rootElement)
+  </script>
+</body>  
