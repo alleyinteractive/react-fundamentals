@@ -1,16 +1,32 @@
-<!-- Using JSX -->
-<!-- http://localhost:3000/isolated/exercise/03.html -->
-
-<!-- <body>
+<body>
   <div id="root"></div>
   <script src="https://unpkg.com/react@17.0.0/umd/react.development.js"></script>
   <script src="https://unpkg.com/react-dom@17.0.0/umd/react-dom.development.js"></script>
-
-  <!-- 💣 remove this line
   <script src="https://unpkg.com/@babel/standalone@7.12.4/babel.js"></script>
-  💣 remove this line -->
+  <script type="text/babel">
+    const children = 'Hello World, its Me again'
+    const className = 'container'
+    const props = {children, className}
+    const element = <div {...props} />
+    ReactDOM.render(element, document.getElementById('root'))
+  </script>
+</body>
 
-  <!-- <script type="text/babel">
+
+
+// <!-- Using JSX -->
+// <!-- http://localhost:3000/isolated/exercise/03.html -->
+
+// <!-- <body>
+//   <div id="root"></div>
+//   <script src="https://unpkg.com/react@17.0.0/umd/react.development.js"></script>
+//   <script src="https://unpkg.com/react-dom@17.0.0/umd/react-dom.development.js"></script>
+
+//   <!-- 💣 remove this line
+//   <script src="https://unpkg.com/@babel/standalone@7.12.4/babel.js"></script>
+//   💣 remove this line -->
+
+//   <!-- <script type="text/babel">
     // 🐨 on the script tag above, change `type="module"`
     // to `type="text/babel"` so babel will compile this code for the browser to run.
 
@@ -35,7 +51,6 @@
     // ReactDOM.render(element, document.getElementById('root'))
   // </script> -->
 <!-- // </body> --> 
-
 
 <body>
   <div id="root"></div>
