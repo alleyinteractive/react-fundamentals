@@ -14,12 +14,16 @@
     // 💰 {message({children: 'Hello World'})} {message({children: 'Goodbye World'})}
     
 
-    const message = ( props ) => <div className='message'>{props.children}</div>;
+    function message ({children}){
+      return <div className="message">{children}</div>
+    }
       
 
         const element = (
           <div className="container">
-            {message({children: "Hello World"})} {message({children:"Goddbye World - B"})}</div>
+            {React.createElement (message, {children: "Hellow World"})}
+            {React.createElement  (message, {children: "Goodbye World"})}
+            </div> 
         )
 
     // 💯 This is only the first step to making actual React components. The rest is in the extra credit!
