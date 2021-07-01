@@ -6,6 +6,7 @@
   <script src="https://unpkg.com/react@17.0.0/umd/react.development.js"></script>
   <script src="https://unpkg.com/react-dom@17.0.0/umd/react-dom.development.js"></script>
   <script src="https://unpkg.com/@babel/standalone@7.12.4/babel.js"></script>
+  <script src="https://unpkg.com/prop-types@15.7.2/prop-types.js"></script>
   <script type="text/babel">
     // 🐨 Make a function called `message` which returns the JSX we want to share
 
@@ -17,20 +18,15 @@
       </div>
     }
 
-    const PropTypes = {
-      string(props, propName, componentName) {
-        if (typeof props[propName] !== 'string') {
-          return new Error(`'${propName}' prop passed to <${componentName} /> needs to be a string`)
-        }
-      }
-    }
-
     Message.propTypes = {
       subject: PropTypes.string,
       greeting: PropTypes.string,
     }
 
-    const element = <Message greeting={52}  subject={"Hello"} />
+    const element = <div className="container">
+      <Message greeting={"World"}  subject={"Hello"} />
+      <Message greeting={"World"}  subject={"Goodbye"} />
+    </div>
 
     // 💯 This is only the first step to making actual React components. The rest is in the extra credit!
     ReactDOM.render(element, document.getElementById('root'))
