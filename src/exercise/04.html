@@ -23,10 +23,10 @@
       greeting: PropTypes.string,
     }
 
-    const element = <div className="container">
+    const element = <React.Fragment>
       <Message greeting={"World"}  subject={"Hello"} />
       <Message greeting={"World"}  subject={"Goodbye"} />
-    </div>
+    </React.Fragment>
 
     // 💯 This is only the first step to making actual React components. The rest is in the extra credit!
     ReactDOM.render(element, document.getElementById('root'))
