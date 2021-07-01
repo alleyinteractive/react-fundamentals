@@ -11,8 +11,8 @@
 
     // 🐨 use that function in place of the divs below with:
     // 💰 {message({children: 'Hello World'})} {message({children: 'Goodbye World'})}
-    function message() {
-      return <div>Default renderable</div>
+    function Message() {
+      return <div>Default render</div>
     }
 
     // const element = (
@@ -22,7 +22,8 @@
     //   </div>
     // )
 
-    const element = React.createElement( message,{children: 'Hello World'})
+    // const element = React.createElement( message,{children: 'Hello World'})
+     const element = <Message />
 
     // 💯 This is only the first step to making actual React components. The rest is in the extra credit!
     ReactDOM.render(element, document.getElementById('root'))
